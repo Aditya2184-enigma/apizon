@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apizon - Top Deals & Reviews</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #e60000;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #cc0000;
+    }
+
+    .navbar {
+      background-color: #e60000;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .menu-btn {
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding: 30px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar.active ~ .main-content {
+      margin-left: 250px;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #ff4d4d, #ff9900);
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      padding: 60px 40px;
+      background-color: #f8f8f8;
+    }
+
+    .deals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin: 15px 0 10px;
+    }
+
+    .affiliate-button {
+      background-color: #e60000;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .disclaimer {
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 250px;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="file:///storage/emulated/0/apizon%20.html">HOME</a>
+    
+   <a href="http://AsrHkrWtTmgAimd:HyV8B2BzosmgYcu@localhost:40483/storage/emulated/0/categories%20.html">CATEGORIES</A>
+    <a href="#">ABOUT ME</a>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="/storage/emulated/0/Pictures/vivogallery/trash/IMG_20250530_165854.png.jpg" alt="Apizon Logo" SIZE=40>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="main-content">
+    <section class="hero">
+      <h1>Find the Best Deals Online</h1>
+      <p>Handpicked low rated products, trusted reviews, and amazing discounts!</p>
+    </section>
+
+    <section class="section">
+    <marquee>  <h2 style="text-align:center; margin-bottom: 30px;">Top Deals Today</h2></marquee><p align=center ><p/>
+      <div class="deals">
+
+        <div class="product">
+          <img src="https://via.placeholder.com/300x180?text=Smart+Watch" alt="Smart Watch">
+          <h3>Smart Watch Pro X</h3>
+          <p>Track fitness, calls, and more.</p>
+          <a class="affiliate-button" href="https://example.com/smartwatch" target="_blank">Buy on Amazon</a>
+        </div>
+
+        <div class="product">
+          <img src="https://via.placeholder.com/300x180?text=Wireless+Earbuds" alt="Wireless Earbuds">
+          <h3>Wireless Earbuds</h3>
+          <p>High-quality sound & battery life.</p>
+          <a class="affiliate-button" href="https://example.com/earbuds" target="_blank">Buy on Flipkart</a>
+        </div>
+
+        <div class="product">
+          <img src="https://via.placeholder.com/300x180?text=Gaming+Keyboard" alt="Gaming Keyboard">
+          <h3>RGB Gaming Keyboard</h3>
+          <p>Perfect for gamers & typing.</p>
+          <a class="affiliate-button" href="https://example.com/keyboard" target="_blank">Buy on Amazon</a>
+        </div><p>
+<div class="new products">
+                   <p><b>Explore more products.</b></mark></p>
+          <a class="affiliate-button" href="https://example.com/keyboard" target="_blank">CLICK HERE</a><p>
+        
+
+      </div>
+<br>
+      <p class="note">
+        NOTE: The products here are secured purchased.
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Apizon. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("main-content").classList.toggle("sidebar-active");
+    }
+  </script>
+
+</body>
+</html>
+      
